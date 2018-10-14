@@ -1,0 +1,38 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /img/(.*\.gif)
+  static_files: img/\1
+  upload: img/.*\.gif
+  mime_type: "image/gif"
+
+- url: /img/(.*\.png)
+  static_files: img/\1
+  upload: img/.*\.png
+  mime_type: "image/x-png"
+
+- url: /img/(.*\.jpg)
+  static_files: img/\1
+  upload: img/.*\.jpg
+  mime_type: "image/jpeg"
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: latest
+- name: markupsafe
+  version: latest
+- name: webapp2
+  version: latest
