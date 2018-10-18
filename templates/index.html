@@ -2,9 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>WVFC Paper Checkout System - Example (172S)</title>
 </head>
 <body>
+<p><a href="{{ url|safe }}" class="btn">{{ url_linktext }}</a></p>
+ <form name="check" action="/index?action=checkpaperwork" method="post">
+<b>1. My personal minimums:</b>
+<p>
+<table style="width:25%">
+    <tr>
+        <th></th>
+        <th>VFR</th>
+        <th>IFR (If Applicable)</th>
+    </tr>
+    <tr>
+        <td>Visibility (sm)</td>
+        <td><input type="text" name="vfrvis" title="vfrvis"></td>
+        <td><input type="text" name="ifrvis" title="ifrvis"></td>
+    </tr>
+    <tr>
+        <td>Ceiling (ft agl)</td>
+        <td><input type="text" name="vfrceiling"></td>
+        <td><input type="text" name="ifcceiling"></td>
+    </tr>
+    <tr>
+        <td>Max surface wind (kts)</td>
+        <td><input type="text" name="vfrsurfacewinds"></td>
+        <td><input type="text" name="ifrsurfacewinds"></td>
+    </tr>
+    <tr>
+        <td>Max crosswind (kts)</td>
+        <td><input type="text" name="vfrmaxxwind"></td>
+        <td><input type="text" name="ifrmaxxwind"></td>
+    </tr>
+</table>
+</p>
 
+<b>2. Key V speeds (max. gross wt. – KIAS) </b>
+<p>
+<table style="width:25%">
+
+    <tr>
+        <td>Abort point min. speed</td>
+        <td><input type="text" name="abortminspeed"></td>
+    </tr>
+    <tr>
+        <td>Rotate (Vr)</td>
+        <td><input type="text" name="vr"></td>
+    </tr>
+    <tr>
+        <td>Vx</td>
+        <td><input type="text" name="vx"></td>
+    </tr>
+    <tr>
+        <td>Vy</td>
+        <td><input type="text" name="vy"></td>
+    </tr>
+    <tr>
+        <td>Va</td>
+        <td><input type="text" name="va"></td>
+    </tr>
+    <tr>
+        <td>Va (1900 lbs)</td>
+        <td><input type="text" name="va1900"></td>
+    </tr>
+    <tr>
+        <td>Best glide</td>
+        <td><input type="text" name="bestglide"></td>
+    </tr>
+    <tr>
+        <td>Vno</td>
+        <td><input type="text" name="vno"></td>
+    </tr>
+    <tr>
+        <td>Vne</td>
+        <td><input type="text" name="vne"></td>
+    </tr>
+    <tr>
+        <td>Vs0</td>
+        <td><input type="text" name="vs0"></td>
+    </tr>
+    <tr>
+        <td>Vs</td>
+        <td><input type="text" name="vs"></td>
+    </tr>
+    <tr>
+        <td>Vs (60 deg. Bank)</td>
+        <td><input type="text" name="vs60"></td>
+    </tr>
+    <tr>
+        <td>Vfe (1st notch)</td>
+        <td><input type="text" name="vfe1"></td>
+    </tr>
+    <tr>
+        <td>Vfe (2nd notch)</td>
+        <td><input type="text" name="vfe2"></td>
+    </tr>
+    <tr>
+        <td>Typical downwind</td>
+        <td><input type="text" name="downwind"></td>
+    </tr>
+    <tr>
+        <td>Typical base</td>
+        <td><input type="text" name="base"></td>
+    </tr>
+    <tr>
+        <td>Normal final</td>
+        <td><input type="text" name="final"></td>
+    </tr>
+    <tr>
+        <td>Short field approach</td>
+        <td><input type="text" name="shortfield"></td>
+    </tr>
+    <tr>
+        <td>No flap landing</td>
+        <td><input type="text" name="noflap"></td>
+    </tr>
+    <tr>
+        <td>Max. demon. x-wind</td>
+        <td><input type="text" name="xwind"></td>
+    </tr>
+    <tr>
+        <td>Additional speeds:</td>
+        <td><input type="text" name="addspeed1"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="text" name="addspeed2"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="text" name="addspeed3"></td>
+    </tr>
+</table>
+
+</p>
+
+<b>4. Engine (example):</b>
+<p>
+<table style="width:25%">
+    <tr>
+        <td>What is the leaning
+            procedure in cruise flight?
+            (Describe)
+        </td>
+        <td><textarea rows="4" cols="50" name="lean">
+</textarea></td>
+    </tr>
+
+</table>
+</p>
+ </form>
 </body>
 </html>

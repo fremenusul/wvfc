@@ -3,6 +3,11 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+
+- url: /static
+  static_files: static
+  upload: static/(.*)
+
 - url: /img/(.*\.gif)
   static_files: img/\1
   upload: img/.*\.gif
